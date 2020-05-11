@@ -10,6 +10,7 @@ Adam optimizer. The model resulted in a F1
 score of 0.806 for all classes.
 
 Introduction
+
 Language for an adult that understands the dialect
 is simple and effortless. However in order for ma-
 chines to understand this, Natural Language Pro-
