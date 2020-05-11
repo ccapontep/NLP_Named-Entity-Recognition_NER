@@ -27,6 +27,37 @@ and future labels in a sequence to identify and clas-
 sify named entities in text that can be later used for
 tasks such as recommendation systems.
 
+Diagram shows a 2D vector space of 100
+words from the Sense embeddings. It was transformed
+from a 400 to 2 dimension vector using only 2,000
+words in the vocabulary to reduce computation com-
+plexity. Words such as ’parliment’, ’country’, and ’eu’
+are found in close proximity showing correctly their
+similarity.
 ![](hw1/stud/images/embed_vector_1.png)
+
+The table shows some of the main ex-
+periments done for the model details such as adding
+Sense embeddings, leaving capitalizations as is, tag-
+ging words with their Senses given its most common
+or WSD synset. Explanation of the reasoning behind
+each chosen experiment is given. Those experiments
+highlighted in green are the main model changes, and
+the orange is the final chosen model.
+
 ![](hw1/stud/images/Table_model_exper.png)
+
+The table shows the performances for the
+chosen NER model. The final F1 score for the test
+dataset is 0.806, which is close to the best value at 1
+where both recall and precision are perfect. Recall is
+the main issue with 0.788 meaning there are lower per-
+centage of correct relevant results. The class that has
+the worst F1 score is ’ORG’, as expected since this
+class can contain words that usually on their own would
+be labelled as any other class, making it the hardest to
+learn (e.g. Expected: ’University of New York’ → all
+’ORG’. Predicted : ’University’ → ’ORG’, ’of’ → ’O’,
+’New York’ → both ’LOC’).
+
 ![](hw1/stud/images/Final_Performance_table_NER.png)
